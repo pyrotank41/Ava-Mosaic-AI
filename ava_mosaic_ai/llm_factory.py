@@ -1,12 +1,13 @@
 
 from typing import Any, Dict, List, Type, Union
+
 import instructor
 from anthropic import Anthropic
-from config.settings import LLMProvider, get_settings
 from openai import OpenAI
 from pydantic import BaseModel, Field
+from ava_mosaic_ai.utils.utils import get_llm_provider
 
-from utils.utils import get_llm_provider
+from ava_mosaic_ai.config.settings import LLMProvider, get_settings
 
 
 class LLMFactory:
