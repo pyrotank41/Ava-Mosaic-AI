@@ -1,8 +1,9 @@
 name: Publish Python 🐍 distribution 📦 to PyPI
 
 on:
-  release:
-    types: [created]
+  push:
+    tags:
+      - 'v*'  # Trigger on any tag starting with 'v'
 
 jobs:
   build-and-publish:
@@ -10,20 +11,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Fetch all history for all tags and branches
+    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: "3.11"
+    
     - name: Install Poetry
       run: |
         curl -sSL https://install.python-poetry.org | python3 -
         echo "$HOME/.local/bin" >> $GITHUB_PATH
+    
     - name: Install dependencies
       run: poetry install
-    - name: Build package
-      run: poetry build
-    - name: Publish package
-      uses: pypa/gh-action-pypi-publish@v1.8.10
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+    
+    - name: Run publish script
+      env:
+        PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        poetry config pypi-token.pypi $PYPI_TOKEN
+        poetry run python publish_script.py
