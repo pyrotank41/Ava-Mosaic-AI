@@ -23,7 +23,7 @@ class LLMProviderSettings(BaseModel):
 
 class OpenAISettings(LLMProviderSettings):
     api_key: str
-    default_model: str = Field(default="gpt-4")
+    default_model: str = Field(default="gpt-4o")
 
 
 class AnthropicSettings(LLMProviderSettings):
@@ -41,7 +41,7 @@ class LlamaSettings(LLMProviderSettings):
 class AzureOpenAISettings(LLMProviderSettings):
     api_key: str
     api_version: str = Field(default="2024-02-15-preview")
-    default_model: str = Field(default="gpt-4")
+    default_model: str = Field(default="gpt-4o")
     azure_endpoint: str
 
 
