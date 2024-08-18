@@ -1,0 +1,6 @@
+{
+    "python.autoComplete.extraPaths": ["./ava"],
+    "python.analysis.extraPaths": ["./ava"],
+    "python.defaultInterpreterPath": "./ava/venv/bin/python",
+    "python.envFile": "${workspaceFolder}/ava/.env"
+}
