@@ -22,6 +22,11 @@ python-dotenv = "^1.0.1"
 ipykernel = "^6.29.5"
 poetry-dynamic-versioning = "^1.4.0"
 
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+style = "semver"
+
 [build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
 build-backend = "poetry_dynamic_versioning.backend"
