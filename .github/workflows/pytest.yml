@@ -37,5 +37,8 @@ jobs:
     - name: Install project
       run: poetry install --no-interaction
     - name: Run tests
+      env:
+        VCR_RECORD_MODE: 'none'  # Ensure we're only using existing cassettes
+        CI: 'true'  # Set CI environment variable
       run: |
         poetry run pytest

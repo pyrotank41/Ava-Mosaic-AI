@@ -26,8 +26,7 @@ load_dotenv()
 class TestCompletionModel(BaseModel):
     response: str = Field(description="Test response")
     reasoning: str = Field(description="Explanation of the response")
-    
-    
+
 def scrub_sensitive_data(response):
     if "body" in response and isinstance(response["body"].get("string", None), str):
         # Scrub API keys
