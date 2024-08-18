@@ -1,4 +1,4 @@
-# AVA Artificial Virtual Agent
+# AVA (Artificial Virtual Agent)
 A light weight library that extends instrictor lib for llm based task
 
 # Special Thanks

@@ -1,10 +1,12 @@
 [tool.poetry]
-name = "ava"
-version = "0.1.0"
+name = "ava-mosaic-ai"
+version = "0.0.0"
 description = ""
 authors = ["Karan Singh Kochar <pyrotank41@gmail.com>"]
 readme = "README.md"
-package-mode = false
+homepage = "https://github.com/pyrotank41/Mosaic-AI.git"
+repository = "https://github.com/pyrotank41/Mosaic-AI.git"
+packages = [{include = "ava_mosaic_ai"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -18,7 +20,8 @@ python-dotenv = "^1.0.1"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
+poetry-dynamic-versioning = "^1.4.0"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
