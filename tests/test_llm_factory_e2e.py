@@ -1,4 +1,5 @@
 import os
+import re
 from typing import List
 from dotenv import load_dotenv
 import pytest
@@ -24,6 +25,17 @@ load_dotenv()
 class TestCompletionModel(BaseModel):
     response: str = Field(description="Test response")
     reasoning: str = Field(description="Explanation of the response")
+    
+    
+def scrub_sensitive_data(response):
+    if "body" in response and isinstance(response["body"].get("string", None), str):
+        # Scrub API keys
+        response["body"]["string"] = re.sub(
+            r"sk-[a-zA-Z0-9]{32,}",
+            "ANTHROPIC_API_KEY_SCRUBBED",
+            response["body"]["string"],
+        )
+    return response
 
 
 # Configure VCR to save cassettes
@@ -31,7 +43,8 @@ vcr = vcr.VCR(
     cassette_library_dir="tests/fixtures/vcr_cassettes",
     record_mode="once",
     match_on=["method", "scheme", "host", "port", "path", "query", "body"],
-    filter_headers=["authorization"],  # Don't record the API key
+    filter_headers=["authorization", "x-api-key"],  # Don't record the API key
+    before_record_response=scrub_sensitive_data,
 )
 
 
