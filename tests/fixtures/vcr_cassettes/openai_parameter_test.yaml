@@ -1,0 +1,209 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "Marry is 25 years old, Jason is 12 years younger
+      than merry. what is the age of jason?"}], "model": "gpt-4o", "max_tokens": 100,
+      "temperature": 0.2, "tool_choice": {"type": "function", "function": {"name":
+      "Response"}}, "tools": [{"type": "function", "function": {"name": "Response",
+      "description": "Response model for the completion", "parameters": {"properties":
+      {"response": {"description": "Answer with explaination using 5th grade math",
+      "title": "Response", "type": "string"}}, "required": ["response"], "type": "object"}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '637'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.41.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.41.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.5
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAwAAAP//bFLBbtpAEL3zFaO59GIQNpjI3JpWapWqrRSiVG2p0LIem03WO+7uOoQg
+        /r1a7GCC6oO1fm/fm+eZ2Q8AUOU4B5Qb4WVV62H2LH9dV5+S++z74n59k6qPT7fbnVxkm/c/vmEU
+        FLx+IOlfVSPJVa3JKzYtLS0JT8E1vkomWTabJdmRqDgnHWRl7YdTHibjZDocp8N40gk3rCQ5nMPv
+        AQDA/vgOEU1OzziHcfSKVOScKAnnp0sAaFkHBIVzynlhPEY9Kdl4MiG1abQ+IzyzXkmhdV+4ffZn
+        575PQutVWvHLy4dU2+uF/bylLz+nf8eP+YM+q9da7+pjoKIx8tSfM/6Ezy+KAaAR1VF7S65m4+hC
+        C4DClk1FxofcuF+i7W4ucb7EO4ZCmRxuhGPzzoEoKYItgSHKwTO4Zu2tkB7iBArLFXwV1u7ai6P2
+        A5SDJIUdCeuAdR6B42AhhZaNFp4CO4Q4GcHdRjko1RM5aBzEk4CQpYItRW2EYBZPerPREg/45o8O
+        g/+d/5xNylLROKG7EXb44bQTmsva8tpdjBgLZZTbrCyFHKFXznPd1g51jhWwebNOWFuuar/y/Egm
+        GGaz1g77Ze/JdNqRnr3QPR6n40EXEN3OeapWhTIl2dqq4yZiUa8mQlwls0QmVzg4DP4BAAD//wMA
+        DS0LpJIDAAA=
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8b5319172fbd6203-ORD
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Aug 2024 15:57:10 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=JzUNTAadqyw90ufy8CEEmomCy_.Ul9hbjsWflyWUhFM-1723996630-1.0.1.1-BNkQ.QM2VoHYby0Ju1xKRsdEZFQAfeKmpwMwVwRFrIAEQv.qJ6aYyH6vj.Xv55p5EnkizpDSbR9BvMnNk26Sdg;
+        path=/; expires=Sun, 18-Aug-24 16:27:10 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=SuzgdVYxASZ_EL_fa9BQ0VhxNSK6rPcTf9fH5m4O47k-1723996630679-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-organization:
+      - user-2vuuwwllzyxyflnlakz9qlta
+      openai-processing-ms:
+      - '804'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '800000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '799869'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 9ms
+      x-request-id:
+      - req_791f68626c4e3c5494f9b56a3b08eef1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"messages": [{"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "Marry is 25 years old, Jason is 12 years younger
+      than merry. what is the age of jason?"}], "model": "gpt-4o", "max_tokens": 100,
+      "temperature": 0.8, "tool_choice": {"type": "function", "function": {"name":
+      "Response"}}, "tools": [{"type": "function", "function": {"name": "Response",
+      "description": "Response model for the completion", "parameters": {"properties":
+      {"response": {"description": "Answer with explaination using 5th grade math",
+      "title": "Response", "type": "string"}}, "required": ["response"], "type": "object"}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '637'
+      content-type:
+      - application/json
+      cookie:
+      - __cf_bm=JzUNTAadqyw90ufy8CEEmomCy_.Ul9hbjsWflyWUhFM-1723996630-1.0.1.1-BNkQ.QM2VoHYby0Ju1xKRsdEZFQAfeKmpwMwVwRFrIAEQv.qJ6aYyH6vj.Xv55p5EnkizpDSbR9BvMnNk26Sdg;
+        _cfuvid=SuzgdVYxASZ_EL_fa9BQ0VhxNSK6rPcTf9fH5m4O47k-1723996630679-0.0.1.1-604800000
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.41.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.41.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.5
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAwAAAP//bFNNa9tAEL37VwxzaQu2seTEjg29FEOatKWQpLRxXcxqNZKVrHbE7iqJ
+        avzfy0qypYTqIIZ58z4YjfYDAMxiXALKnXAyL9Ro8SLXq0teu/Xt6l6rqIw/Vw9/9VP1Jf9xj0PP
+        4OiBpDuyxpLzQpHLWDewNCQcedVgHk4Xi9lsGtRAzjEpT0sLNzrjUTgJz0aT81EwbYk7ziRZXMLv
+        AQDAvn77iDqmF1zCZHjs5GStSAmXpyEANKx8B4W1mXVCOxx2oGTtSPvUulSqBzhmtZVCqc64efa9
+        utuTUGq7/noX34TfVz8/Reri8uHy6urX8wXfXvf8GumqqAMlpZan/fTwU3/5xgwAtchr7g3ZgrWl
+        N1wAFCYtc9LO58b9Bk07ucHlBu8YkkzHcC0s63cWREpDeCbQRDE4BltGzgjpwO0IdJlHZIATqEgY
+        25Ags1BxqVMy4HZCwzdhTAWJ4bwpG9UxXCUtlFkIz1sJVjGIo79HgrBFWs2hd9Y+khRKlko46oeF
+        qAInHjOdes33PcMPte4xvx8IwjHc8rDzCs9h5A0/QjDt8ow3eMBXSzwM/lf/6R2HoaS0QrVX0/YP
+        pzNUnBaGI/vmqjDJdGZ3W0M+kf881nHReHuf2gHLVxeMheG8cFvHj6S94GLWyGH3f3XgxbQFHTuh
+        un4wXwzagGgr6yjfJplfd2Gy+vgxKbZTIebhLJThHAeHwT8AAAD//wMAd7amzwUEAAA=
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8b53191e39046203-ORD
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Aug 2024 15:57:18 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-organization:
+      - user-2vuuwwllzyxyflnlakz9qlta
+      openai-processing-ms:
+      - '7425'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '800000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '799869'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 9ms
+      x-request-id:
+      - req_51b99b5da75954978eaacbf6a61a6914
+    status:
+      code: 200
+      message: OK
+version: 1

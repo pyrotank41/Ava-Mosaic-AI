@@ -1,0 +1,379 @@
+interactions:
+- request:
+    body: '{"max_tokens": 100, "messages": [{"role": "user", "content": "Marry is
+      25 years old, Jason is 12 years younger than merry. what is the age of jason?"}],
+      "model": "claude-3-sonnet-20240229", "system": "You are a helpful assistant.",
+      "temperature": 0.2, "tool_choice": {"type": "tool", "name": "Response"}, "tools":
+      [{"name": "Response", "description": "Response model for the completion", "input_schema":
+      {"description": "Response model for the completion", "properties": {"response":
+      {"description": "Answer with explaination using 5th grade math", "title": "Response",
+      "type": "string"}}, "required": ["response"], "title": "Response", "type": "object"}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      anthropic-version:
+      - '2023-06-01'
+      connection:
+      - keep-alive
+      content-length:
+      - '657'
+      content-type:
+      - application/json
+      host:
+      - api.anthropic.com
+      user-agent:
+      - Anthropic/Python 0.34.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 0.34.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.5
+    method: POST
+    uri: https://api.anthropic.com/v1/messages
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA0yPwU7DQAxE/8XnjbRJiiB7peqFExROCEWrxLQVGztZe6u2Uf4dbUsljh7PPM3M
+        cOjBwSC71pab7WPs0unhsp2O6yZOU/Nx3KzBgJ5HzC4U8TsEA5FDFrzIQdSTgoGBewzgoAs+9VjU
+        hTARalHZamWrqgEDHZMiKbjP+Y5U5tAmycxrkXyn1parOHWvl5dn/KaJ36MmPO+HEgyQH3LuDWVk
+        uuVoTApuXpYvA6I8thG9MOXC/tQq/yAJ/L0Ep4TUIThKIRhI10FuvlHuZlc/1QY46X+ttHZZfgEA
+        AP//AwBz1sU8MAEAAA==
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8b53194faf542bed-ORD
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Aug 2024 15:57:21 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      X-Robots-Tag:
+      - none
+      anthropic-ratelimit-requests-limit:
+      - '50'
+      anthropic-ratelimit-requests-remaining:
+      - '49'
+      anthropic-ratelimit-requests-reset:
+      - '2024-08-18T15:57:23Z'
+      anthropic-ratelimit-tokens-limit:
+      - '40000'
+      anthropic-ratelimit-tokens-remaining:
+      - '40000'
+      anthropic-ratelimit-tokens-reset:
+      - '2024-08-18T15:57:21Z'
+      request-id:
+      - req_016phk2nt9MGVVMU5je4BK2D
+      via:
+      - 1.1 google
+      x-cloud-trace-context:
+      - ab14c1ee8e20eb6e594a137599f00e34
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"max_tokens": 100, "messages": [{"role": "user", "content": [{"type":
+      "text", "text": "Marry is 25 years old, Jason is 12 years younger than merry.
+      what is the age of jason?"}]}, {"role": "assistant", "content": [{"id": "toolu_014rqcQzKCefnqoTrtueyhm1",
+      "input": {}, "name": "Response", "type": "tool_use"}]}, {"role": "user", "content":
+      [{"type": "tool_result", "tool_use_id": "toolu_014rqcQzKCefnqoTrtueyhm1", "content":
+      "Validation Error found:\n1 validation error for Response\nresponse\n  Field
+      required [type=missing, input_value={}, input_type=dict]\n    For further information
+      visit https://errors.pydantic.dev/2.8/v/missing\nRecall the function correctly,
+      fix the errors", "is_error": true}]}], "model": "claude-3-sonnet-20240229",
+      "system": "You are a helpful assistant.", "temperature": 0.2, "tool_choice":
+      {"type": "tool", "name": "Response"}, "tools": [{"name": "Response", "description":
+      "Response model for the completion", "input_schema": {"description": "Response
+      model for the completion", "properties": {"response": {"description": "Answer
+      with explaination using 5th grade math", "title": "Response", "type": "string"}},
+      "required": ["response"], "title": "Response", "type": "object"}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      anthropic-version:
+      - '2023-06-01'
+      connection:
+      - keep-alive
+      content-length:
+      - '1210'
+      content-type:
+      - application/json
+      host:
+      - api.anthropic.com
+      user-agent:
+      - Anthropic/Python 0.34.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 0.34.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.5
+    method: POST
+    uri: https://api.anthropic.com/v1/messages
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA1RQ20rDQBD9lWVefNlIsjGlXfChiBcqhVoRQZGwNENaTHdiZpeahPy7bNpCfZxz
+        mzPTw64ADXsu8zh5yT7mk47YLJ6zVeEef7v3rn4DCa6tMaiQ2ZQIEhqqAmCYd+yMdSBhTwVWoGFT
+        GV9glEZM1qKLVKxuYqVmIGFD1qF1oD/7c6QjqnLPIXMsEmafx8lymx7U/G56v8anLF2Z5UNJ07DG
+        mn3wrZFrskefrb0D3UNzxjQsDJMVOxaJEi2ahkVL3pbYCLc1VixN07RSHLYUNCo7aagqrsUridF9
+        xcKUeOKjEHQrkvRCCcPwJYEd1XmDwfH/nJFg/PFoNwja+qqS4Mf/6f5YOnf0jZZBZ3Emgby7xCaz
+        YfgDAAD//wMAlsMU+J4BAAA=
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8b53195f791c2bed-ORD
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Aug 2024 15:57:22 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      X-Robots-Tag:
+      - none
+      anthropic-ratelimit-requests-limit:
+      - '50'
+      anthropic-ratelimit-requests-remaining:
+      - '49'
+      anthropic-ratelimit-requests-reset:
+      - '2024-08-18T15:57:23Z'
+      anthropic-ratelimit-tokens-limit:
+      - '40000'
+      anthropic-ratelimit-tokens-remaining:
+      - '40000'
+      anthropic-ratelimit-tokens-reset:
+      - '2024-08-18T15:57:22Z'
+      request-id:
+      - req_01QkE5QtiqS9ZfWnnRabjvPr
+      via:
+      - 1.1 google
+      x-cloud-trace-context:
+      - 3402c3517546a98af0bde9464ca2d26f
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"max_tokens": 100, "messages": [{"role": "user", "content": "Marry is
+      25 years old, Jason is 12 years younger than merry. what is the age of jason?"}],
+      "model": "claude-3-sonnet-20240229", "system": "You are a helpful assistant.",
+      "temperature": 0.8, "tool_choice": {"type": "tool", "name": "Response"}, "tools":
+      [{"name": "Response", "description": "Response model for the completion", "input_schema":
+      {"description": "Response model for the completion", "properties": {"response":
+      {"description": "Answer with explaination using 5th grade math", "title": "Response",
+      "type": "string"}}, "required": ["response"], "title": "Response", "type": "object"}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      anthropic-version:
+      - '2023-06-01'
+      connection:
+      - keep-alive
+      content-length:
+      - '657'
+      content-type:
+      - application/json
+      host:
+      - api.anthropic.com
+      user-agent:
+      - Anthropic/Python 0.34.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 0.34.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.5
+    method: POST
+    uri: https://api.anthropic.com/v1/messages
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA0yPQWuDQBCF/8ucV1i1KWZvlRwktoWW9lBKkUUHm2Sd0cwuVMT/XjZpoMd58943
+        bxY4dGBgkL7R6UPxke9Lru3bVG621bGep6f7FBT4ecToQhHbIyg4s4uCFTmIt+RBwcAdOjDQOhs6
+        TPJEmAh9kunsTmfZFhS0TB7Jg/lcbkjP7JogkXkpEufQ6LTCHc/P36eymLB/qeTdPtb7eIbsEHOv
+        KCPTNUdj8GCWdf1SIJ7H5oxWmGJh+9N4PiEJ/K0Ep4DUIhgKzikIl4fMcqXczCYvcgUc/H8t1Xpd
+        fwEAAP//AwAYNeXtMAEAAA==
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8b531969da402bed-ORD
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Aug 2024 15:57:25 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      X-Robots-Tag:
+      - none
+      anthropic-ratelimit-requests-limit:
+      - '50'
+      anthropic-ratelimit-requests-remaining:
+      - '49'
+      anthropic-ratelimit-requests-reset:
+      - '2024-08-18T15:58:23Z'
+      anthropic-ratelimit-tokens-limit:
+      - '40000'
+      anthropic-ratelimit-tokens-remaining:
+      - '40000'
+      anthropic-ratelimit-tokens-reset:
+      - '2024-08-18T15:57:25Z'
+      request-id:
+      - req_019CDADKMKHe8nCJLag1yzPs
+      via:
+      - 1.1 google
+      x-cloud-trace-context:
+      - 7aaecf80d6f068c5cca726fa3f9264c1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"max_tokens": 100, "messages": [{"role": "user", "content": [{"type":
+      "text", "text": "Marry is 25 years old, Jason is 12 years younger than merry.
+      what is the age of jason?"}]}, {"role": "assistant", "content": [{"id": "toolu_01HeDoyNhkB8qegQHsUaLKJt",
+      "input": {}, "name": "Response", "type": "tool_use"}]}, {"role": "user", "content":
+      [{"type": "tool_result", "tool_use_id": "toolu_01HeDoyNhkB8qegQHsUaLKJt", "content":
+      "Validation Error found:\n1 validation error for Response\nresponse\n  Field
+      required [type=missing, input_value={}, input_type=dict]\n    For further information
+      visit https://errors.pydantic.dev/2.8/v/missing\nRecall the function correctly,
+      fix the errors", "is_error": true}]}], "model": "claude-3-sonnet-20240229",
+      "system": "You are a helpful assistant.", "temperature": 0.8, "tool_choice":
+      {"type": "tool", "name": "Response"}, "tools": [{"name": "Response", "description":
+      "Response model for the completion", "input_schema": {"description": "Response
+      model for the completion", "properties": {"response": {"description": "Answer
+      with explaination using 5th grade math", "title": "Response", "type": "string"}},
+      "required": ["response"], "title": "Response", "type": "object"}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      anthropic-version:
+      - '2023-06-01'
+      connection:
+      - keep-alive
+      content-length:
+      - '1210'
+      content-type:
+      - application/json
+      host:
+      - api.anthropic.com
+      user-agent:
+      - Anthropic/Python 0.34.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 0.34.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.5
+    method: POST
+    uri: https://api.anthropic.com/v1/messages
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA1SQ0WrbQBBFf2WYl76sgyTH1Bb0LdQlSQsuBpckRWykkaxEnpF2dtuqxv8e1kog
+        eZy75x525ohthTketCmS9Nu6kRv+Otzd/qs/0zis7/5wv0WDfuwpUqRqG0KDTroYWNVWvWWPBg9S
+        UYc5lp0NFc3mMxVm8rMsyS6TLFuhwVLYE3vM749vSi/SFUGj8/yROIciSX+s+nTYbWjYlE+P693/
+        fbr/dcVokO0h9n6S9sJTj/vgMT+ie8ty3ArULVdwbVX4k4JtyMBfAiaqwAtoePTOlh7SDGonB/hu
+        nRsnEKSGbAHackmTAFqN4EjWKYwSuCEHfm95ql088ANnC5hF6Auk8zhv9+SoFkfmnWP+6pCuusDT
+        6bdB9dIXjiLx8RrnB6UhEJeEOYeuMxjO58+P086Fl2dixXyRLAxK8O+z5fJ0egEAAP//AwCy1flG
+        3QEAAA==
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8b531977a8d32bed-ORD
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Aug 2024 15:57:27 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      X-Robots-Tag:
+      - none
+      anthropic-ratelimit-requests-limit:
+      - '50'
+      anthropic-ratelimit-requests-remaining:
+      - '49'
+      anthropic-ratelimit-requests-reset:
+      - '2024-08-18T15:58:23Z'
+      anthropic-ratelimit-tokens-limit:
+      - '40000'
+      anthropic-ratelimit-tokens-remaining:
+      - '40000'
+      anthropic-ratelimit-tokens-reset:
+      - '2024-08-18T15:57:27Z'
+      request-id:
+      - req_01TmX7X7bqrmTj5ddMjNP83q
+      via:
+      - 1.1 google
+      x-cloud-trace-context:
+      - 49dd3190d7af50a2d7dcf276a371c9e8
+    status:
+      code: 200
+      message: OK
+version: 1

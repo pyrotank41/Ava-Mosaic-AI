@@ -2,6 +2,7 @@ import os
 import re
 from typing import List
 from dotenv import load_dotenv
+from openai import AuthenticationError
 import pytest
 import vcr
 from pydantic import BaseModel, Field
@@ -95,11 +96,10 @@ def test_e2e_parameter_handling(provider):
     llm = LLMFactory(provider)
 
     with vcr.use_cassette(f"{provider.value}_parameter_test.yaml"):
-        class User(BaseModel):
-            name: str = Field(description="Name of the user")
-            age: int = Field(description="Age of the user")
-            explanation: str = Field(
-                description="Explanation of the response in 5th grade math"
+        class Response(BaseModel):
+            """Response model for the completion"""
+            response: str = Field(
+                description="Answer with explaination using 5th grade math"
             )
 
         messages = [
@@ -112,43 +112,41 @@ def test_e2e_parameter_handling(provider):
 
         # Test with different temperature values
         completion_low_temp = llm.create_completion(
-            response_model=User, messages=messages, temperature=0.2, max_tokens=100
+            response_model=Response, messages=messages, temperature=0.2, max_tokens=100
         )
         print(completion_low_temp)
 
         completion_high_temp = llm.create_completion(
-            response_model=User, messages=messages, temperature=0.8, max_tokens=100
+            response_model=Response, messages=messages, temperature=0.8, max_tokens=100
         )
 
         # The responses should be different due to different temperature settings
-        assert completion_low_temp.explanation != completion_high_temp.explanation
+        assert completion_low_temp.response != completion_high_temp.response
 
         # Check that max_tokens is respected
         import tiktoken
 
         encoding = tiktoken.get_encoding("cl100k_base")
-        assert len(encoding.encode(completion_low_temp.explanation)) <= 100
-        assert len(encoding.encode(completion_high_temp.explanation)) <= 100
+        assert len(encoding.encode(completion_low_temp.response)) <= 100
+        assert len(encoding.encode(completion_high_temp.response)) <= 100
 
 
 def test_e2e_error_handling():
     # Test with an invalid API key to trigger an error
-    with pytest.raises(
-        InstructorRetryException
-    ):  # Replace with the specific exception your code raises
+    with pytest.raises(InstructorRetryException): 
         with vcr.use_cassette("invalid_api_key_test.yaml"):
-            # set env variable to invalid key
-            os.environ.update({"OPENAI_API_KEY": "invalid_key"})
-            # os.environ.pop("OPENAI_API_KEY")
             llm = LLMFactory(LLMProvider.OPENAI)
-            llm.settings.api_key = "invalid_key"
-
+            llm.api_key = "invalid_key"
+            # print(llm.client.api_key)
+            
             messages = [{"role": "user", "content": "Hello, tell me a joke."}]
 
             resp = llm.create_completion(
                 response_model=TestCompletionModel, messages=messages, max_retries=1
             )
             print(resp)
+            
+            assert False
 
 
 if __name__ == "__main__":

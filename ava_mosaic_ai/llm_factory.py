@@ -1,11 +1,9 @@
-
 from typing import Any, Dict, List, Type, Union
 import instructor
 from anthropic import Anthropic
 from openai import OpenAI, AzureOpenAI
 from pydantic import BaseModel, Field
 from ava_mosaic_ai.utils.utils import get_llm_provider
-
 from ava_mosaic_ai.config.settings import LLMProvider, get_settings
 
 
@@ -16,25 +14,26 @@ class LLMFactory:
 
         self.provider = provider
         self.settings = get_settings().get_provider_settings(provider)
+        self._api_key = self.settings.api_key
         self.client = self._initialize_client()
 
     def _initialize_client(self) -> Any:
         client_initializers = {
-            LLMProvider.OPENAI: lambda s: instructor.from_openai(
-                OpenAI(api_key=s.api_key)
+            LLMProvider.OPENAI: lambda: instructor.from_openai(
+                OpenAI(api_key=self._api_key)
             ),
-            LLMProvider.ANTHROPIC: lambda s: instructor.from_anthropic(
-                Anthropic(api_key=s.api_key)
+            LLMProvider.ANTHROPIC: lambda: instructor.from_anthropic(
+                Anthropic(api_key=self._api_key)
             ),
-            LLMProvider.LLAMA: lambda s: instructor.from_openai(
-                OpenAI(base_url=s.base_url, api_key=s.api_key),
+            LLMProvider.LLAMA: lambda: instructor.from_openai(
+                OpenAI(base_url=self.settings.base_url, api_key=self._api_key),
                 mode=instructor.Mode.JSON,
             ),
-            LLMProvider.AZURE_OPENAI: lambda s: instructor.from_openai(
+            LLMProvider.AZURE_OPENAI: lambda: instructor.from_openai(
                 AzureOpenAI(
-                    api_key=s.api_key,
-                    azure_endpoint=s.azure_endpoint,
-                    api_version=s.api_version
+                    api_key=self._api_key,
+                    azure_endpoint=self.settings.azure_endpoint,
+                    api_version=self.settings.api_version,
                 )
             ),
         }
@@ -42,8 +41,17 @@ class LLMFactory:
         initializer = client_initializers.get(self.provider)
 
         if initializer:
-            return initializer(self.settings)
+            return initializer()
         raise ValueError(f"Unsupported LLM provider: {self.provider}")
+
+    @property
+    def api_key(self):
+        return self._api_key
+
+    @api_key.setter
+    def api_key(self, value):
+        self._api_key = value
+        self.client = self._initialize_client()
 
     def create_completion(
         self, response_model: Type[BaseModel], messages: List[Dict[str, str]], **kwargs
@@ -57,29 +65,3 @@ class LLMFactory:
             "messages": messages,
         }
         return self.client.chat.completions.create(**completion_params)
-
-
-if __name__ == "__main__":
-
-    class CompletionModel(BaseModel):
-        response: str = Field(description="Your response to the user.")
-        reasoning: str = Field(description="Explain your reasoning for the response.")
-
-    messages = [
-        {"role": "system", "content": "You are a helpful assistant."},
-        {
-            "role": "user",
-            "content": "If it takes 2 hours to dry 1 shirt out in the sun, how long will it take to dry 5 shirts?",
-        },
-    ]
-
-    llm = LLMFactory("openai")
-    llm.settings.default_model = "gpt-4"
-    completion = llm.create_completion(
-        response_model=CompletionModel,
-        messages=messages,
-    )
-    assert isinstance(completion, CompletionModel)
-
-    print(f"Response: {completion.response}\n")
-    print(f"Reasoning: {completion.reasoning}")

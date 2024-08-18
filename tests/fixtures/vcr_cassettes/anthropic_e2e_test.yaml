@@ -1,0 +1,103 @@
+interactions:
+- request:
+    body: '{"max_tokens": 300, "messages": [{"role": "user", "content": "What are
+      three key benefits of end-to-end testing in software development?"}], "model":
+      "claude-3-sonnet-20240229", "system": "You are a helpful assistant.", "temperature":
+      0.7, "tool_choice": {"type": "tool", "name": "TestCompletionModel"}, "tools":
+      [{"name": "TestCompletionModel", "description": "Correctly extracted `TestCompletionModel`
+      with all the required parameters with correct types", "input_schema": {"properties":
+      {"response": {"description": "Test response", "title": "Response", "type": "string"},
+      "reasoning": {"description": "Explanation of the response", "title": "Reasoning",
+      "type": "string"}}, "required": ["response", "reasoning"], "title": "TestCompletionModel",
+      "type": "object"}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      anthropic-version:
+      - '2023-06-01'
+      connection:
+      - keep-alive
+      content-length:
+      - '768'
+      content-type:
+      - application/json
+      host:
+      - api.anthropic.com
+      user-agent:
+      - Anthropic/Python 0.34.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 0.34.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.5
+    method: POST
+    uri: https://api.anthropic.com/v1/messages
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA4yU3W7cNhCFX2XAm95ojd2N09h71xotWiAFWqMFijbFgiZH2ulSQ4Uz1Fox/O4F
+        uT+WgwTopSgOzzkzH/lkyJuN6aXbLlfv9/eP02/8eHe/ummp+/P2/XfTWzGN0WnAsgtFbIemMSmG
+        smBFSNSymsb00WMwG+OCzR4XbxYSmVEX6+X6erle35rGuMiKrGbz99P5SI0xbLOUM6uR8p23y9Uf
+        N7erfz/tPr399a/79U8/tnjH3x6uTWPY9qXudxS9i/0QUCnyL1W7McRDVrN5MglliCx15y4hwh4n
+        eEDGllQgtoDsFxoXyB4URYk7IAaJrR5sQvA4YohDj6xgE24+8AdeXcHPCqMN5K2igO4QkJUSvtTJ
+        JIo9tCn2IGqTgkZoiUl2DSBLTkXJhgAu9kNkZBUgVuySVQTLHtrMrmQCF1NCp2ECjR3qDtNVsbGu
+        Norpo4WLNjFYGFL0udYvAu2LwZFS5BKkAWfV7WpUkVwTWIXeTsBRQXJqravHkMRgFT1kppNUlX5T
+        pXcYBgHyJXs7gccWncoxczGUBdM3AgMmGdApjTiL/spxj6gCCT9mStjXXpQODCmO5FHAQhejrwcC
+        Pg6YCNnhVeEPrUQm7szG/PCFUZbaQlgZ9UXu/LfGJh5jGFHOAz2bc0eoZi5PLf3KUIX6HI7lCW1Y
+        HGIKxbLtEMQh20TxGMtbtbWBl3yCIyYbwKXsyIYLoHPcMFFL51kVcIg9jeSznTPUQB99DihNlRJM
+        IzkUOMS0n4F02CG/4OYvYIEtDXuJXime83IqKVge2Tmj+P00vz+W58Cd+KKenMzAbIAUnGXI7OKI
+        6UxjwnAyBS5yS10+KkpTW/dgpcRj1BLqFDRW9zNNG6C1TmM6deyF4Ap6T3JB+TNuBNTusTIwQ7cA
+        dLzoRw6b17xY/V9EZ7EPFEinwg97m/wX7ksk1iI3Eh6uzPPzP40RjcP2yPrrt7L+EPyYy4UwG84h
+        NKZCV16/+gxuNe6RxWyulzeNiVnna+t3756f/wMAAP//AwBQ9+RL/AUAAA==
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8b530e1e388e10b4-ORD
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Aug 2024 15:49:46 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      X-Robots-Tag:
+      - none
+      anthropic-ratelimit-requests-limit:
+      - '50'
+      anthropic-ratelimit-requests-remaining:
+      - '49'
+      anthropic-ratelimit-requests-reset:
+      - '2024-08-18T15:50:23Z'
+      anthropic-ratelimit-tokens-limit:
+      - '40000'
+      anthropic-ratelimit-tokens-remaining:
+      - '39000'
+      anthropic-ratelimit-tokens-reset:
+      - '2024-08-18T15:49:41Z'
+      request-id:
+      - req_01NUPpbaa5phfvLt29tdQJm6
+      via:
+      - 1.1 google
+      x-cloud-trace-context:
+      - bb645b6d2afb289845a68f66c23cc280
+    status:
+      code: 200
+      message: OK
+version: 1

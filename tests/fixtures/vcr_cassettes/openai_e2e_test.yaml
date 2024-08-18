@@ -1,0 +1,115 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "What are three key benefits of end-to-end testing
+      in software development?"}], "model": "gpt-4o", "max_tokens": 300, "temperature":
+      0.7, "tool_choice": {"type": "function", "function": {"name": "TestCompletionModel"}},
+      "tools": [{"type": "function", "function": {"name": "TestCompletionModel", "description":
+      "Correctly extracted `TestCompletionModel` with all the required parameters
+      with correct types", "parameters": {"properties": {"response": {"description":
+      "Test response", "title": "Response", "type": "string"}, "reasoning": {"description":
+      "Explanation of the response", "title": "Reasoning", "type": "string"}}, "required":
+      ["reasoning", "response"], "type": "object"}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      content-length:
+      - '789'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.41.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.41.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.5
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAwAAAP//bFVNb9tGEL3rVwz2ZkASLNmxa93S2EBySFsUdoqmLoTRckhuvNxhd4ay
+        GcP/vdgl9WHDPBDkztebN4/D5wmAcYVZgbE1qm1aP7t6sn/GH799j3+VHx+4u/vjui/Ptuds/24+
+        fzfTFMGbH2R1FzW33LSe1HEYzDYSKqWsi8vl2dXVxeLyQzY0XJBPYVWrs3OeLU+X57PTD7PF2RhY
+        s7MkZgX/TAAAnvM9QQwFPZkVnE53Jw2JYEVmtXcCMJF9OjEo4kQxqJkejJaDUkioQ+f9kUGZ/dqi
+        94fCw/V89HzgCb1ffyuv7M9i2z1uumv38Uq3/e3n5vfF3VG9IXXfZkBlF+yenyP7/nz1phiACdjk
+        2FsS/bRn+GumcPrWGWPVNRQ0tWCe700kaTkI3ZvVvbmtIxE8UA8bClQ6FeASKBQz5RmFApREXajA
+        BRAu9REjQUFb8tympICRVrA4gQQjUk1B3JbgE28pYkUruAnSRRLQGhW0JqCgLhJg23pnMeGG0vMj
+        PHJ8EEABemrJKhVTKCM3IIpRQRlKF5zUc1iewJ1QhJunlqKjYAm+oXdFzrWCr65xViASeuiSn1gK
+        GB1LSrIdPOmA5xWQkXMByzGSVd9DyTHzkXLJHM5O4Aaj7+GalLJzIuyLSEeygi9Faq90JIChgEjC
+        fksCLtuBcqQLufAxi7a3nqYQqehsYjvZLYvmLFSWHDWVKd1Tsm66SsCjUpzfm2maKAoHF6o80pt3
+        hidgY2cdetiQxU4InO65kLFc1hGBC0pVHAhJ5dN7xH2r6H325ZA0lZrBgzKOyJzDrz2IazqPGcM7
+        A5kmFIEVOPge6FgpLhRu64oOPbQYB1UmlNKLUpPFAsoVaZ0SEjaeRHwPm04BvTC0kbeuSHOA2lXJ
+        yye+Ux7LoXRFFs44iqxWP8Kjva7m46iL41GPo9Q6clfVmYqD7neE1+TbzE2DLii6sBvqfx16p/2o
+        Du9w4/L7rr2RyCl0Xl2DSr4HT1jkeAaEhiNB5E0nmnosOqvze/NiXn31L5P3nv89WmyRyk7Qjxtv
+        PH/Zr1DPVRt5I282ohm+wfUguLRPRLkdaqc6uYLpXm1f00ZuWl0rP1BICRenF0M+c/g5HFkvd1Zl
+        RX8wLH9ZTkaIZlDBunShothGl1e3Kdv1GeLl8mJpl5dm8jL5HwAA//8DAF+CiDzDBgAA
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8b530dff1f8f2c6c-ORD
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Aug 2024 15:49:40 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=WZeKoBu7tzoTJlQRk43gMvUgLOj1bGD28887XP5PGFk-1723996180-1.0.1.1-Zvsf_u48YYEswEopNEdXxxD1g.KwMZSeaSVSia5xWrba.mP060QRwYjq1rVS0AqTTDvKJFZ8FEzPyAz6MWujiQ;
+        path=/; expires=Sun, 18-Aug-24 16:19:40 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=UbqNZ8pjvUQtLYbZvn.6FXuas0oiG4.vG0i_FPnyqEQ-1723996180045-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+      openai-organization:
+      - user-2vuuwwllzyxyflnlakz9qlta
+      openai-processing-ms:
+      - '4664'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains; preload
+      x-ratelimit-limit-requests:
+      - '5000'
+      x-ratelimit-limit-tokens:
+      - '800000'
+      x-ratelimit-remaining-requests:
+      - '4999'
+      x-ratelimit-remaining-tokens:
+      - '799672'
+      x-ratelimit-reset-requests:
+      - 12ms
+      x-ratelimit-reset-tokens:
+      - 24ms
+      x-request-id:
+      - req_be1119ed3f583a5d7d959439a63dc048
+    status:
+      code: 200
+      message: OK
+version: 1
