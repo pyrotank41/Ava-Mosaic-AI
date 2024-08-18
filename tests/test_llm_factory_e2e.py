@@ -45,6 +45,7 @@ vcr = vcr.VCR(
     match_on=["method", "scheme", "host", "port", "path", "query", "body"],
     filter_headers=["authorization", "x-api-key"],  # Don't record the API key
     before_record_response=scrub_sensitive_data,
+    ignore_hosts=["openaipublic.blob.core.windows.net"],
 )
 
 
@@ -128,7 +129,6 @@ def test_e2e_parameter_handling(provider):
         encoding = tiktoken.get_encoding("cl100k_base")
         assert len(encoding.encode(completion_low_temp.response)) <= 100
         assert len(encoding.encode(completion_high_temp.response)) <= 100
-
 
 def test_e2e_error_handling():
     # Test with an invalid API key to trigger an error

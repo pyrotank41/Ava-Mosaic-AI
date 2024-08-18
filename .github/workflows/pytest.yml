@@ -46,4 +46,4 @@ jobs:
         VCR_RECORD_MODE: 'none'  # Ensure we're only using existing cassettes
         CI: 'true'  # Set CI environment variable
       run: |
-        poetry run pytest --ci
+        poetry run pytest

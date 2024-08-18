@@ -50,7 +50,7 @@ interactions:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8b532d23cdf06165-ORD
+      - 8b5478964e4b2a15-ORD
       Connection:
       - keep-alive
       Content-Length:
@@ -58,14 +58,14 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 18 Aug 2024 16:10:50 GMT
+      - Sun, 18 Aug 2024 19:57:07 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=nEr4GROUP4ZbdG.GeDjfDejElm4UcPfoboj3kLPytoY-1723997450-1.0.1.1-6gpZvyT8WGeCa7Hsmv0eetKZYmt43890UmjwVXnYT8KS4xEmCEeSrXWigjeWyDxDb1MdCrbCtxSeJDSi6vHwbQ;
-        path=/; expires=Sun, 18-Aug-24 16:40:50 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=VLqeHx0gC9CfB4l6CDg0kMGGi0i8G9dZDBd22cUaLRI-1724011027-1.0.1.1-QD9_T_AEeiUx5sUoU0jrzMJwzjQlynaRkls.IDabpSxdBy_KqNo_zTGRzRTVeMIFt8j7qSAyeakAwmo99g1I3w;
+        path=/; expires=Sun, 18-Aug-24 20:27:07 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=B8m5K8_jCbj65DY8X3Y7uNpFmSWVXCDHcU0138Uak38-1723997450951-0.0.1.1-604800000;
+      - _cfuvid=G6URwuapkeZYEtLPODb_CoKxUSsBwYSs1xeDOVAsGuk-1724011027004-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
@@ -76,7 +76,7 @@ interactions:
       vary:
       - Origin
       x-request-id:
-      - req_2dbd4f2066ab645ca111a912be1a85d0
+      - req_96cef5846a9387908911926ae0737521
     status:
       code: 401
       message: Unauthorized

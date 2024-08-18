@@ -46,25 +46,24 @@ interactions:
   response:
     body:
       string: !!binary |
-        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
+        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
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8b530e1e388e10b4-ORD
+      - 8b5478130f186179-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -72,7 +71,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 18 Aug 2024 15:49:46 GMT
+      - Sun, 18 Aug 2024 19:56:51 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -84,19 +83,19 @@ interactions:
       anthropic-ratelimit-requests-remaining:
       - '49'
       anthropic-ratelimit-requests-reset:
-      - '2024-08-18T15:50:23Z'
+      - '2024-08-18T19:57:23Z'
       anthropic-ratelimit-tokens-limit:
       - '40000'
       anthropic-ratelimit-tokens-remaining:
-      - '39000'
+      - '40000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-08-18T15:49:41Z'
+      - '2024-08-18T19:56:51Z'
       request-id:
-      - req_01NUPpbaa5phfvLt29tdQJm6
+      - req_013dMCM3kwKQ2m9r2Zw1cVA8
       via:
       - 1.1 google
       x-cloud-trace-context:
-      - bb645b6d2afb289845a68f66c23cc280
+      - 9db6b94b9f94f25d2df7d9c63fd167e4
     status:
       code: 200
       message: OK

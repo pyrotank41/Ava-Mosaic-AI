@@ -13,13 +13,13 @@ parent_dir = Path(__file__).resolve().parent.parent
 # Add the parent directory to sys.path
 sys.path.insert(0, str(parent_dir))
 
-def pytest_addoption(parser):
-    parser.addoption(
-        "--ci",
-        action="store_true",
-        default=False,
-        help="Run tests as if in a CI environment",
-    )
+# def pytest_addoption(parser):
+#     parser.addoption(
+#         "--ci",
+#         action="store_true",
+#         default=False,
+#         help="Run tests as if in a CI environment",
+#     )
 
 
 def pytest_configure(config):

@@ -44,27 +44,26 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAwAAAP//bFVNb9tGEL3rVwz2ZkASLNmxa93S2EBySFsUdoqmLoTRckhuvNxhd4ay
-        GcP/vdgl9WHDPBDkztebN4/D5wmAcYVZgbE1qm1aP7t6sn/GH799j3+VHx+4u/vjui/Ptuds/24+
-        fzfTFMGbH2R1FzW33LSe1HEYzDYSKqWsi8vl2dXVxeLyQzY0XJBPYVWrs3OeLU+X57PTD7PF2RhY
-        s7MkZgX/TAAAnvM9QQwFPZkVnE53Jw2JYEVmtXcCMJF9OjEo4kQxqJkejJaDUkioQ+f9kUGZ/dqi
-        94fCw/V89HzgCb1ffyuv7M9i2z1uumv38Uq3/e3n5vfF3VG9IXXfZkBlF+yenyP7/nz1phiACdjk
-        2FsS/bRn+GumcPrWGWPVNRQ0tWCe700kaTkI3ZvVvbmtIxE8UA8bClQ6FeASKBQz5RmFApREXajA
-        BRAu9REjQUFb8tympICRVrA4gQQjUk1B3JbgE28pYkUruAnSRRLQGhW0JqCgLhJg23pnMeGG0vMj
-        PHJ8EEABemrJKhVTKCM3IIpRQRlKF5zUc1iewJ1QhJunlqKjYAm+oXdFzrWCr65xViASeuiSn1gK
-        GB1LSrIdPOmA5xWQkXMByzGSVd9DyTHzkXLJHM5O4Aaj7+GalLJzIuyLSEeygi9Faq90JIChgEjC
-        fksCLtuBcqQLufAxi7a3nqYQqehsYjvZLYvmLFSWHDWVKd1Tsm66SsCjUpzfm2maKAoHF6o80pt3
-        hidgY2cdetiQxU4InO65kLFc1hGBC0pVHAhJ5dN7xH2r6H325ZA0lZrBgzKOyJzDrz2IazqPGcM7
-        A5kmFIEVOPge6FgpLhRu64oOPbQYB1UmlNKLUpPFAsoVaZ0SEjaeRHwPm04BvTC0kbeuSHOA2lXJ
-        yye+Ux7LoXRFFs44iqxWP8Kjva7m46iL41GPo9Q6clfVmYqD7neE1+TbzE2DLii6sBvqfx16p/2o
-        Du9w4/L7rr2RyCl0Xl2DSr4HT1jkeAaEhiNB5E0nmnosOqvze/NiXn31L5P3nv89WmyRyk7Qjxtv
-        PH/Zr1DPVRt5I282ohm+wfUguLRPRLkdaqc6uYLpXm1f00ZuWl0rP1BICRenF0M+c/g5HFkvd1Zl
-        RX8wLH9ZTkaIZlDBunShothGl1e3Kdv1GeLl8mJpl5dm8jL5HwAA//8DAF+CiDzDBgAA
+        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
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8b530dff1f8f2c6c-ORD
+      - 8b54780498452cc5-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -72,14 +71,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 18 Aug 2024 15:49:40 GMT
+      - Sun, 18 Aug 2024 19:56:45 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=WZeKoBu7tzoTJlQRk43gMvUgLOj1bGD28887XP5PGFk-1723996180-1.0.1.1-Zvsf_u48YYEswEopNEdXxxD1g.KwMZSeaSVSia5xWrba.mP060QRwYjq1rVS0AqTTDvKJFZ8FEzPyAz6MWujiQ;
-        path=/; expires=Sun, 18-Aug-24 16:19:40 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=Z6WPlY8jHfcD85Ft_uS2iIt7U0kQkcrweH4O3H3Bq.4-1724011005-1.0.1.1-Vf5jkvEpsVmXbD9DD.iC4t0oXgOu6rGS4EEdD2888Wd9xRMdI9meawTWWfj.IKq39oRwlt38TAkhWmjrs4IU5g;
+        path=/; expires=Sun, 18-Aug-24 20:26:45 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=UbqNZ8pjvUQtLYbZvn.6FXuas0oiG4.vG0i_FPnyqEQ-1723996180045-0.0.1.1-604800000;
+      - _cfuvid=kiDKSDaNIc8DeU3DGDrGKmA3UFFTPUsSP2pda9vB2p8-1724011005499-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -90,7 +89,7 @@ interactions:
       openai-organization:
       - user-2vuuwwllzyxyflnlakz9qlta
       openai-processing-ms:
-      - '4664'
+      - '1644'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
@@ -102,13 +101,13 @@ interactions:
       x-ratelimit-remaining-requests:
       - '4999'
       x-ratelimit-remaining-tokens:
-      - '799672'
+      - '799671'
       x-ratelimit-reset-requests:
       - 12ms
       x-ratelimit-reset-tokens:
       - 24ms
       x-request-id:
-      - req_be1119ed3f583a5d7d959439a63dc048
+      - req_ff84bec57ec9a40caaf59db11a2a18ac
     status:
       code: 200
       message: OK

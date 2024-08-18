@@ -44,16 +44,16 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA0yPwU7DQAxE/8XnjbRJiiB7peqFExROCEWrxLQVGztZe6u2Uf4dbUsljh7PPM3M
-        cOjBwSC71pab7WPs0unhsp2O6yZOU/Nx3KzBgJ5HzC4U8TsEA5FDFrzIQdSTgoGBewzgoAs+9VjU
-        hTARalHZamWrqgEDHZMiKbjP+Y5U5tAmycxrkXyn1parOHWvl5dn/KaJ36MmPO+HEgyQH3LuDWVk
-        uuVoTApuXpYvA6I8thG9MOXC/tQq/yAJ/L0Ep4TUIThKIRhI10FuvlHuZlc/1QY46X+ttHZZfgEA
-        AP//AwBz1sU8MAEAAA==
+        H4sIAAAAAAAAA0yPX0vDQBDEv8s+X+CSU6n3Jpbqgxb/gYJIOJKllF52Y3avRkO+u1xrwcednfkx
+        M8G2BQ+dbGpbnq/XI47VuNy/Xt3wav9zf7F4VjCg3z1mF4qEDYKBgWMWgshWNFD2dNxiBA9NDKnF
+        whXCRKhFZaszW1WXYKBhUiQF/z6dkMoc6ySZeSiS71Tb8rbTN8cufd25Qa8flw+7VffSggEKXc49
+        ofRMxxz1ScFP8/xhQJT7esAgTLlwGGvlHZLA30vwMyE1CJ5SjAbSYZCfjpST2buFM8BJ/2ultfP8
+        CwAA//8DACOYgD0wAQAA
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8b53194faf542bed-ORD
+      - 8b54785688e310af-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -61,7 +61,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 18 Aug 2024 15:57:21 GMT
+      - Sun, 18 Aug 2024 19:56:58 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -73,28 +73,28 @@ interactions:
       anthropic-ratelimit-requests-remaining:
       - '49'
       anthropic-ratelimit-requests-reset:
-      - '2024-08-18T15:57:23Z'
+      - '2024-08-18T19:57:23Z'
       anthropic-ratelimit-tokens-limit:
       - '40000'
       anthropic-ratelimit-tokens-remaining:
       - '40000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-08-18T15:57:21Z'
+      - '2024-08-18T19:56:58Z'
       request-id:
-      - req_016phk2nt9MGVVMU5je4BK2D
+      - req_01UwhkcZajmnJnDy38yUagHU
       via:
       - 1.1 google
       x-cloud-trace-context:
-      - ab14c1ee8e20eb6e594a137599f00e34
+      - 5084252ef9284568c7e21a3cb304e90b
     status:
       code: 200
       message: OK
 - request:
     body: '{"max_tokens": 100, "messages": [{"role": "user", "content": [{"type":
       "text", "text": "Marry is 25 years old, Jason is 12 years younger than merry.
-      what is the age of jason?"}]}, {"role": "assistant", "content": [{"id": "toolu_014rqcQzKCefnqoTrtueyhm1",
+      what is the age of jason?"}]}, {"role": "assistant", "content": [{"id": "toolu_01HmtX3o3uwL3rtCQDPkFmTd",
       "input": {}, "name": "Response", "type": "tool_use"}]}, {"role": "user", "content":
-      [{"type": "tool_result", "tool_use_id": "toolu_014rqcQzKCefnqoTrtueyhm1", "content":
+      [{"type": "tool_result", "tool_use_id": "toolu_01HmtX3o3uwL3rtCQDPkFmTd", "content":
       "Validation Error found:\n1 validation error for Response\nresponse\n  Field
       required [type=missing, input_value={}, input_type=dict]\n    For further information
       visit https://errors.pydantic.dev/2.8/v/missing\nRecall the function correctly,
@@ -141,17 +141,17 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA1RQ20rDQBD9lWVefNlIsjGlXfChiBcqhVoRQZGwNENaTHdiZpeahPy7bNpCfZxz
-        mzPTw64ADXsu8zh5yT7mk47YLJ6zVeEef7v3rn4DCa6tMaiQ2ZQIEhqqAmCYd+yMdSBhTwVWoGFT
-        GV9glEZM1qKLVKxuYqVmIGFD1qF1oD/7c6QjqnLPIXMsEmafx8lymx7U/G56v8anLF2Z5UNJ07DG
-        mn3wrZFrskefrb0D3UNzxjQsDJMVOxaJEi2ahkVL3pbYCLc1VixN07RSHLYUNCo7aagqrsUridF9
-        xcKUeOKjEHQrkvRCCcPwJYEd1XmDwfH/nJFg/PFoNwja+qqS4Mf/6f5YOnf0jZZBZ3Emgby7xCaz
-        YfgDAAD//wMAlsMU+J4BAAA=
+        H4sIAAAAAAAAA1SQ3UrDQBCFX2WZG282kr9qXfAFUgpaeyGKhCUZ0phkNmZ2W2LIu8umLdTLOfOd
+        w5mZoC5BQcdVHkb76uWUfiTrU0/fad00a6retw8gwY49egqZdYUgYTCtFzRzzVaTBQmdKbEFBUWr
+        XYlBErAhQhvEYZyGcfwEEgpDFsmC+pyukdaYNnfsM5cifnZ5GGXRkY+Z3RTN67pLk91vjZt9BBJI
+        d963Q+4NnX3UOwtqguGqKcg0GxI1iygWI+qBxWgcVTgIe9AktnoYRilOB+OZeHVhTFveizcjxWK/
+        Y6ErvACBT3oWUXKDwjx/SWBr+nxA7/h/z7Jg/HFIBYIi17YS3PJANZ1b59Y0SAxqFa4kGGdvtcdw
+        nv8AAAD//wMAHvXwF58BAAA=
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8b53195f791c2bed-ORD
+      - 8b5478648c9b10af-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -159,7 +159,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 18 Aug 2024 15:57:22 GMT
+      - Sun, 18 Aug 2024 19:57:00 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -171,19 +171,19 @@ interactions:
       anthropic-ratelimit-requests-remaining:
       - '49'
       anthropic-ratelimit-requests-reset:
-      - '2024-08-18T15:57:23Z'
+      - '2024-08-18T19:57:23Z'
       anthropic-ratelimit-tokens-limit:
       - '40000'
       anthropic-ratelimit-tokens-remaining:
       - '40000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-08-18T15:57:22Z'
+      - '2024-08-18T19:57:00Z'
       request-id:
-      - req_01QkE5QtiqS9ZfWnnRabjvPr
+      - req_01Dn1Wfmb5ECkSUkHDVsGuSN
       via:
       - 1.1 google
       x-cloud-trace-context:
-      - 3402c3517546a98af0bde9464ca2d26f
+      - 8394a9d690e68eac43bac4085db05945
     status:
       code: 200
       message: OK
@@ -232,16 +232,16 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA0yPQWuDQBCF/8ucV1i1KWZvlRwktoWW9lBKkUUHm2Sd0cwuVMT/XjZpoMd58943
-        bxY4dGBgkL7R6UPxke9Lru3bVG621bGep6f7FBT4ecToQhHbIyg4s4uCFTmIt+RBwcAdOjDQOhs6
-        TPJEmAh9kunsTmfZFhS0TB7Jg/lcbkjP7JogkXkpEufQ6LTCHc/P36eymLB/qeTdPtb7eIbsEHOv
-        KCPTNUdj8GCWdf1SIJ7H5oxWmGJh+9N4PiEJ/K0Ep4DUIhgKzikIl4fMcqXczCYvcgUc/H8t1Xpd
-        fwEAAP//AwAYNeXtMAEAAA==
+        H4sIAAAAAAAAA0yPT0vDQBDFv8ucN7D5o8a9eWkPitBCCyIS1uy0FDczsTNrjSHfXdJa8Dhv3vvx
+        3giHAA462Tc2r3CoF3hz+tmudHh6funDQ6U7MKBDj7MLRfwewcCR4yx4kYOoJwUDHQeM4KCNPgXM
+        ykyYCDUrbFHZorgHAy2TIim41/GKVObYJJmZ5yLznRqb3y3Car0L/H77VT8ul367KdvNCQyQ7+bc
+        GqVnuuSoTwpunKY3A6LcN0f0wjQX9t+N8geSwN9L8DMhtQiOUowG0nmQGy+Uq9mVdWmAk/7Xcmun
+        6RcAAP//AwDqKOITMAEAAA==
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8b531969da402bed-ORD
+      - 8b54786f1b6b10af-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -249,7 +249,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 18 Aug 2024 15:57:25 GMT
+      - Sun, 18 Aug 2024 19:57:03 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -261,28 +261,28 @@ interactions:
       anthropic-ratelimit-requests-remaining:
       - '49'
       anthropic-ratelimit-requests-reset:
-      - '2024-08-18T15:58:23Z'
+      - '2024-08-18T19:57:23Z'
       anthropic-ratelimit-tokens-limit:
       - '40000'
       anthropic-ratelimit-tokens-remaining:
       - '40000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-08-18T15:57:25Z'
+      - '2024-08-18T19:57:03Z'
       request-id:
-      - req_019CDADKMKHe8nCJLag1yzPs
+      - req_01C3qqB5dc8irtWyrYgWoof5
       via:
       - 1.1 google
       x-cloud-trace-context:
-      - 7aaecf80d6f068c5cca726fa3f9264c1
+      - ec31d813fe211a4102f478d87a0a04c9
     status:
       code: 200
       message: OK
 - request:
     body: '{"max_tokens": 100, "messages": [{"role": "user", "content": [{"type":
       "text", "text": "Marry is 25 years old, Jason is 12 years younger than merry.
-      what is the age of jason?"}]}, {"role": "assistant", "content": [{"id": "toolu_01HeDoyNhkB8qegQHsUaLKJt",
+      what is the age of jason?"}]}, {"role": "assistant", "content": [{"id": "toolu_017FdQRfdob6v8KGGaVU3cUw",
       "input": {}, "name": "Response", "type": "tool_use"}]}, {"role": "user", "content":
-      [{"type": "tool_result", "tool_use_id": "toolu_01HeDoyNhkB8qegQHsUaLKJt", "content":
+      [{"type": "tool_result", "tool_use_id": "toolu_017FdQRfdob6v8KGGaVU3cUw", "content":
       "Validation Error found:\n1 validation error for Response\nresponse\n  Field
       required [type=missing, input_value={}, input_type=dict]\n    For further information
       visit https://errors.pydantic.dev/2.8/v/missing\nRecall the function correctly,
@@ -329,18 +329,16 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAA1SQ0WrbQBBFf2WYl76sgyTH1Bb0LdQlSQsuBpckRWykkaxEnpF2dtuqxv8e1kog
-        eZy75x525ohthTketCmS9Nu6kRv+Otzd/qs/0zis7/5wv0WDfuwpUqRqG0KDTroYWNVWvWWPBg9S
-        UYc5lp0NFc3mMxVm8rMsyS6TLFuhwVLYE3vM749vSi/SFUGj8/yROIciSX+s+nTYbWjYlE+P693/
-        fbr/dcVokO0h9n6S9sJTj/vgMT+ie8ty3ArULVdwbVX4k4JtyMBfAiaqwAtoePTOlh7SDGonB/hu
-        nRsnEKSGbAHackmTAFqN4EjWKYwSuCEHfm95ql088ANnC5hF6Auk8zhv9+SoFkfmnWP+6pCuusDT
-        6bdB9dIXjiLx8RrnB6UhEJeEOYeuMxjO58+P086Fl2dixXyRLAxK8O+z5fJ0egEAAP//AwCy1flG
-        3QEAAA==
+        H4sIAAAAAAAAA0yPUUvDQBCE/8s+X+CSNqD3Jrb0QStUgkJFwjVZSu1lN8nugRLy3+VaCz7u7MzH
+        zASnFhx0cqxt/rZuVuWiet8Om2F82p2L1bL1d2BAf3pMLhTxRwQDI4ckeJGTqCcFAx23GMBBE3xs
+        MVtkwkSoWWGLpS2KezDQMCmSgvuYbkhlDnWUxLwUSXesbV4eeMfrh+3jPo+VPO+/qsPipQED5LuU
+        e0Xpma456qOCm+b504Ao9/WIXphSYf9dK5+RBP5egkNEahAcxRAMxMsgN10pN7MrbWmAo/7Xcmvn
+        +RcAAP//AwD3veVOMAEAAA==
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 8b531977a8d32bed-ORD
+      - 8b54787e89c110af-ORD
       Connection:
       - keep-alive
       Content-Encoding:
@@ -348,7 +346,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 18 Aug 2024 15:57:27 GMT
+      - Sun, 18 Aug 2024 19:57:05 GMT
       Server:
       - cloudflare
       Transfer-Encoding:
@@ -360,19 +358,123 @@ interactions:
       anthropic-ratelimit-requests-remaining:
       - '49'
       anthropic-ratelimit-requests-reset:
-      - '2024-08-18T15:58:23Z'
+      - '2024-08-18T19:57:23Z'
       anthropic-ratelimit-tokens-limit:
       - '40000'
       anthropic-ratelimit-tokens-remaining:
       - '40000'
       anthropic-ratelimit-tokens-reset:
-      - '2024-08-18T15:57:27Z'
+      - '2024-08-18T19:57:05Z'
       request-id:
-      - req_01TmX7X7bqrmTj5ddMjNP83q
+      - req_013FChH8vDY3LLbiPzdNuLzm
       via:
       - 1.1 google
       x-cloud-trace-context:
-      - 49dd3190d7af50a2d7dcf276a371c9e8
+      - 773e295a74db2b7ededbc8435e4ea323
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"max_tokens": 100, "messages": [{"role": "user", "content": [{"type":
+      "text", "text": "Marry is 25 years old, Jason is 12 years younger than merry.
+      what is the age of jason?"}]}, {"role": "assistant", "content": [{"id": "toolu_017FdQRfdob6v8KGGaVU3cUw",
+      "input": {}, "name": "Response", "type": "tool_use"}]}, {"role": "user", "content":
+      [{"type": "tool_result", "tool_use_id": "toolu_017FdQRfdob6v8KGGaVU3cUw", "content":
+      "Validation Error found:\n1 validation error for Response\nresponse\n  Field
+      required [type=missing, input_value={}, input_type=dict]\n    For further information
+      visit https://errors.pydantic.dev/2.8/v/missing\nRecall the function correctly,
+      fix the errors", "is_error": true}]}, {"role": "assistant", "content": [{"id":
+      "toolu_015boQoEAMCZ1uTsLZjTb3Nc", "input": {}, "name": "Response", "type": "tool_use"}]},
+      {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "toolu_015boQoEAMCZ1uTsLZjTb3Nc",
+      "content": "Validation Error found:\n1 validation error for Response\nresponse\n  Field
+      required [type=missing, input_value={}, input_type=dict]\n    For further information
+      visit https://errors.pydantic.dev/2.8/v/missing\nRecall the function correctly,
+      fix the errors", "is_error": true}]}], "model": "claude-3-sonnet-20240229",
+      "system": "You are a helpful assistant.", "temperature": 0.8, "tool_choice":
+      {"type": "tool", "name": "Response"}, "tools": [{"name": "Response", "description":
+      "Response model for the completion", "input_schema": {"description": "Response
+      model for the completion", "properties": {"response": {"description": "Answer
+      with explaination using 5th grade math", "title": "Response", "type": "string"}},
+      "required": ["response"], "title": "Response", "type": "object"}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate
+      anthropic-version:
+      - '2023-06-01'
+      connection:
+      - keep-alive
+      content-length:
+      - '1735'
+      content-type:
+      - application/json
+      host:
+      - api.anthropic.com
+      user-agent:
+      - Anthropic/Python 0.34.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 0.34.0
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.11.5
+    method: POST
+    uri: https://api.anthropic.com/v1/messages
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA1SQT0/CQBDFv8pmLl62pn+A6CYevHgg8SIqRmOahQ6loey0O7uQ0vS7my2QyHHe
+        /N7Lm+mhKkDBnss8Tr6O3Xu7meDqNJ3MD9/tYTn/yF5AgusaDBQy6xJBgqU6CJq5YqeNAwl7KrAG
+        Beta+wKjLGIyBl2UxukkTtNHkLAm49A4UD/9NdIR1bnnkDkWCbPP4yQrefe8nC50q93nabY5LLuH
+        VQUSjN4H3xtyQ+bsM413oHqwV03BXDMZUbFIUtGhtiw68qZEK9xWG/Gqre2kOG4pMOn0wlBd3IsF
+        idF9x0KXeNlHIehJJNk/EobhVwI7anKLwXF7zrhgbD2aNYIyvq4l+PF/qj+Xzh3t0DCoWTqTQN7d
+        aI/D8AcAAP//AwCIPrbIngEAAA==
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 8b54788bcace10af-ORD
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Aug 2024 19:57:06 GMT
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      X-Robots-Tag:
+      - none
+      anthropic-ratelimit-requests-limit:
+      - '50'
+      anthropic-ratelimit-requests-remaining:
+      - '49'
+      anthropic-ratelimit-requests-reset:
+      - '2024-08-18T19:57:23Z'
+      anthropic-ratelimit-tokens-limit:
+      - '40000'
+      anthropic-ratelimit-tokens-remaining:
+      - '40000'
+      anthropic-ratelimit-tokens-reset:
+      - '2024-08-18T19:57:06Z'
+      request-id:
+      - req_01NZhpiZS1kmFd3dMsRANRxx
+      via:
+      - 1.1 google
+      x-cloud-trace-context:
+      - 9dba36b95f2703e101f2c1dd8ec342b0
     status:
       code: 200
       message: OK
