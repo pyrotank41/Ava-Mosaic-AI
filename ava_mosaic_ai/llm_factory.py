@@ -3,7 +3,7 @@ from typing import Any, Dict, List, Type, Union
 
 import instructor
 from anthropic import Anthropic
-from openai import OpenAI
+from openai import OpenAI, AzureOpenAI
 from pydantic import BaseModel, Field
 from ava_mosaic_ai.utils.utils import get_llm_provider
 
@@ -16,6 +16,7 @@ class LLMFactory:
             provider = get_llm_provider(provider)
 
         self.provider = provider
+        print(f"Provider: {self.provider}")
         self.settings = get_settings().get_provider_settings(provider)
         self.client = self._initialize_client()
 
@@ -30,6 +31,13 @@ class LLMFactory:
             LLMProvider.LLAMA: lambda s: instructor.from_openai(
                 OpenAI(base_url=s.base_url, api_key=s.api_key),
                 mode=instructor.Mode.JSON,
+            ),
+            LLMProvider.AZURE_OPENAI: lambda s: instructor.from_openai(
+                AzureOpenAI(
+                    api_key=s.api_key,
+                    azure_endpoint=s.azure_endpoint,
+                    api_version=s.api_version
+                )
             ),
         }
 

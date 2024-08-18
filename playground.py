@@ -1,7 +1,6 @@
 from pydantic import Field, BaseModel
 import ava_mosaic_ai
 
-
 class CompletionModel(BaseModel):
     response: str = Field(description="Your response to the user.")
     reasoning: str = Field(description="Explain your reasoning for the response.")
@@ -14,8 +13,8 @@ messages = [
     },
 ]
 
-llm = ava_mosaic_ai.get_llm(provider = "openai")
-llm.settings.default_model = "gpt-4"
+llm = ava_mosaic_ai.get_llm(provider = "azure_openai")
+llm.settings.default_model = "gpt-4o"
 completion = llm.create_completion(
     response_model=CompletionModel,
     messages=messages,
