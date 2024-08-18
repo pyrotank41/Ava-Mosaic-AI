@@ -23,13 +23,13 @@ Mosaic is a lightweight Python library that extends the capabilities of the Inst
 ## Installation
 
 ```bash
-pip install mosaic-ai
+pip install ava-mosaic-ai
 ```
 
 ## Quick Start
 
 ```python
-from mosaic import LLMFactory
+from ava-mosaic-ai import LLMFactory
 
 # Initialize LLM
 llm = LLMFactory.create("gpt-3.5-turbo")
