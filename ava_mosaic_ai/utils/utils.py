@@ -1,4 +1,4 @@
-from config.settings import LLMProvider
+from ava_mosaic_ai.config.settings import LLMProvider
 
 
 def get_llm_provider(name: str) -> LLMProvider:
