@@ -29,13 +29,21 @@ pip install ava-mosaic-ai
 ## Quick Start
 
 ```python
-from ava-mosaic-ai import LLMFactory
+import ava_mosaic_ai
+from pydantic import BaseModel
 
 # Initialize LLM
-llm = LLMFactory.create("gpt-3.5-turbo")
+llm = ava_mosaic_ai.get_llm("openai")
+
+# Define response model
+class ResponseModel(BaseModel):
+    response: str
 
 # Use Mosaic's simplified interface
-response = llm.generate("Tell me a joke about AI")
+response = llm.create_completion(
+    response_model=ResponseModel,
+    messages=[{"role": "user", "content": "Tell me a joke about AI"}],
+)
 print(response)
 ```
 
