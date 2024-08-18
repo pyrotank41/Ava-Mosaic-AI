@@ -1,6 +1,5 @@
 
 from typing import Any, Dict, List, Type, Union
-
 import instructor
 from anthropic import Anthropic
 from openai import OpenAI, AzureOpenAI
@@ -16,7 +15,6 @@ class LLMFactory:
             provider = get_llm_provider(provider)
 
         self.provider = provider
-        print(f"Provider: {self.provider}")
         self.settings = get_settings().get_provider_settings(provider)
         self.client = self._initialize_client()
 

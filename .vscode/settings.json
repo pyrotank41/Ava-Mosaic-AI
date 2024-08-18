@@ -2,5 +2,6 @@
     "python.autoComplete.extraPaths": ["./ava_mosaic_ai"],
     "python.analysis.extraPaths": ["./ava_mosaic_ai"],
     "python.defaultInterpreterPath": "./ava_mosaic_ai/venv/bin/python",
-    "python.envFile": "${workspaceFolder}/ava_mosaic_ai/.env"
+    "python.envFile": "${workspaceFolder}/ava_mosaic_ai/.env",
+    "search.useIgnoreFiles": false
 }

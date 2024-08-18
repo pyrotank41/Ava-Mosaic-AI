@@ -1,6 +1,9 @@
 from pydantic import Field, BaseModel
 import ava_mosaic_ai
 
+import warnings
+warnings.filterwarnings('error', category=UserWarning)
+
 class CompletionModel(BaseModel):
     response: str = Field(description="Your response to the user.")
     reasoning: str = Field(description="Explain your reasoning for the response.")

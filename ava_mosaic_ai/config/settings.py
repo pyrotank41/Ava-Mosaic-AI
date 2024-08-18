@@ -1,7 +1,6 @@
 from typing import Optional, Dict, Any
 from enum import Enum
 from pydantic import BaseModel, Field
-from pydantic_settings import BaseSettings, SettingsConfigDict
 from functools import lru_cache
 from dotenv import load_dotenv
 import os
@@ -17,9 +16,9 @@ class LLMProvider(str, Enum):
 
 
 class LLMProviderSettings(BaseModel):
-    temperature: float = Field(default=0.0)
+    temperature: float = 0.0
     max_tokens: Optional[int] = None
-    max_retries: int = Field(default=3)
+    max_retries: int = 3
 
 
 class OpenAISettings(LLMProviderSettings):
@@ -46,11 +45,9 @@ class AzureOpenAISettings(LLMProviderSettings):
     azure_endpoint: str
 
 
-class Settings(BaseSettings):
+class Settings(BaseModel):
     app_name: str = Field(default="GenAI Project Template")
     _providers: Dict[LLMProvider, Any] = {}
-
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     def get_provider_settings(self, provider: LLMProvider) -> Any:
         if provider not in self._providers:
