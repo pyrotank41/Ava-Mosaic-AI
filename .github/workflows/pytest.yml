@@ -38,6 +38,11 @@ jobs:
       run: poetry install --no-interaction
     - name: Run tests
       env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+        AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+        AZURE_OPENAI_DEPLOYMENT_NAME: ${{ secrets.AZURE_OPENAI_DEPLOYMENT_NAME }}
         VCR_RECORD_MODE: 'none'  # Ensure we're only using existing cassettes
         CI: 'true'  # Set CI environment variable
       run: |
