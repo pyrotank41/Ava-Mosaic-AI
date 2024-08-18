@@ -23,6 +23,7 @@ tiktoken = "^0.7.0"
 ipykernel = "^6.29.5"
 poetry-dynamic-versioning = "^1.4.0"
 vcrpy = "^6.0.1"
+loguru = "^0.7.2"
 
 [tool.poetry-dynamic-versioning]
 enable = true
