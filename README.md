@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# AVA (Artificial Virtual Agent)
-A light weight library that extends instrictor lib for llm based task
-=======
 # Mosaic-AI
 ```
  __   __  _______  _______  _______  ___   _______ 
@@ -12,9 +8,8 @@ A light weight library that extends instrictor lib for llm based task
 | ||_|| ||       | _____| ||   _   ||   | |     |_ 
 |_|   |_||_______||_______||__| |__||___| |_______|
 ```
->>>>>>> ad57121223f7cbe30526dbb01b4245695f3ace5d
 
-## About Mosaic-AI
+## About Ava-Mosaic-AI
 
 Mosaic is a lightweight Python library that extends the capabilities of the Instructor library for LLM-based tasks. Born out of a personal project to streamline repetitive processes in GenAI development, Mosaic aims to reduce overhead and simplify common operations in LLM/GenAI projects.
 
@@ -69,4 +64,4 @@ Mosaic is released under the MIT License. See the [LICENSE](LICENSE) file for de
 
 ---
 
-Built with ❤️ by [Your Name/Organization]
+Built with ❤️ by [karan Singh Kochar]
