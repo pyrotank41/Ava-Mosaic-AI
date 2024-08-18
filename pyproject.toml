@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "ava"
+version = "0.1.0"
+description = ""
+authors = ["Karan Singh Kochar <pyrotank41@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+instructor = "^1.3.7"
+pydantic = "^2.8.2"
+anthropic = "^0.34.0"
+openai = "^1.41.0"
+pydantic-settings = "^2.4.0"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
