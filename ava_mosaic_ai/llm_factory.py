@@ -10,19 +10,6 @@ from instructor import Instructor
 from anthropic import Anthropic
 
 
-def get_portkey_azure_openai_client(portkey_api_key: str, virtual_api_key: str):
-    portkey = OpenAI(
-        api_key="gpt-4o-2024-08-bc0138",
-        base_url=PORTKEY_GATEWAY_URL,
-        default_headers=createHeaders(
-            # provider="openai",
-            virtual_key="gpt-4o-2024-08-bc0138",
-            api_key="KPhEnBPeKn5DQneaHaC6LLcfrGgw",
-        ),
-    )
-    return instructor.from_openai(portkey)
-
-
 class LLMFactory:
     def __init__(
         self, 
@@ -33,7 +20,6 @@ class LLMFactory:
             provider = get_llm_provider(provider)
 
         self.metadata = metadata
-        print(f"metadata: {metadata}")
         self.provider = provider
         self.settings = get_settings().get_provider_settings(provider)
         self._api_key = self.settings.api_key

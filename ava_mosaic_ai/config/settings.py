@@ -100,12 +100,12 @@ class Settings(BaseModel):
                 )
             elif provider == LLMProvider.PORTKEY_AZURE_OPENAI:
                 api_key = os.environ.get("PORTKEY_API_KEY")
-                virtual_api_key = os.environ.get("PORTKEY_VIRTUAL_API_KEY")        
+                virtual_api_key = os.environ.get("PORTKEY_AZURE_OPENAI_VIRTUAL_API_KEY")        
                 self._providers[provider] = PortkeyAzureOpenAISettings(api_key=api_key, virtual_api_key=virtual_api_key)
                 
             elif provider == LLMProvider.PORTKEY_ANTHROPIC:
                 api_key = os.environ.get("PORTKEY_API_KEY")
-                virtual_api_key = os.environ.get("PORTKEY_VIRTUAL_API_KEY")
+                virtual_api_key = os.environ.get("PORTKEY_ANTHROPIC_VIRTUAL_API_KEY")
                 self._providers[provider] = PortkeyAnthropicSettings(api_key=api_key, virtual_api_key=virtual_api_key)   
         return self._providers[provider]
 

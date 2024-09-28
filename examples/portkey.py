@@ -8,9 +8,9 @@ metadata = {"_user": "karan@test.dev",
             "environment": "development",
             "session_id": str(uuid.uuid4())}
 
-# client = LLMFactory(LLMProvider.PORTKEY_AZURE_OPENAI, metadata=metadata)
+client = LLMFactory(LLMProvider.PORTKEY_AZURE_OPENAI, metadata=metadata)
 # client = LLMFactory(LLMProvider.AZURE_OPENAI)
-client = LLMFactory(LLMProvider.PORTKEY_ANTHROPIC, metadata=metadata)
+# client = LLMFactory(LLMProvider.PORTKEY_ANTHROPIC, metadata=metadata)
 
 class User(BaseModel):
     name: str
