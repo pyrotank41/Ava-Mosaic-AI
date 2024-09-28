@@ -13,6 +13,10 @@ class LLMProvider(str, Enum):
     ANTHROPIC = "anthropic"
     LLAMA = "llama"
     AZURE_OPENAI = "azure_openai"
+    
+    # llms that are used with portkey
+    PORTKEY_AZURE_OPENAI = "portkey_azure"
+    PORTKEY_ANTHROPIC = "portkey_anthropic"
 
 
 class LLMProviderSettings(BaseModel):
@@ -43,6 +47,17 @@ class AzureOpenAISettings(LLMProviderSettings):
     api_version: str = Field(default="2024-02-15-preview")
     default_model: str = Field(default="gpt-4o")
     azure_endpoint: str
+    
+class PortkeyAzureOpenAISettings(LLMProviderSettings):
+    api_key: str 
+    virtual_api_key: str
+    default_model: str = Field(default="gpt-4o")
+    
+class PortkeyAnthropicSettings(LLMProviderSettings):
+    api_key: str
+    virtual_api_key: str
+    default_model: str = Field(default="claude-3-5-sonnet-20240620")
+    max_tokens: int = Field(default=1024)
 
 
 class Settings(BaseModel):
@@ -83,6 +98,15 @@ class Settings(BaseModel):
                     azure_endpoint=endpoint,
                     default_model=deployment_name,
                 )
+            elif provider == LLMProvider.PORTKEY_AZURE_OPENAI:
+                api_key = os.environ.get("PORTKEY_API_KEY")
+                virtual_api_key = os.environ.get("PORTKEY_VIRTUAL_API_KEY")        
+                self._providers[provider] = PortkeyAzureOpenAISettings(api_key=api_key, virtual_api_key=virtual_api_key)
+                
+            elif provider == LLMProvider.PORTKEY_ANTHROPIC:
+                api_key = os.environ.get("PORTKEY_API_KEY")
+                virtual_api_key = os.environ.get("PORTKEY_VIRTUAL_API_KEY")
+                self._providers[provider] = PortkeyAnthropicSettings(api_key=api_key, virtual_api_key=virtual_api_key)   
         return self._providers[provider]
 
 
