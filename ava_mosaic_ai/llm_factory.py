@@ -99,8 +99,4 @@ class LLMFactory:
             "response_model": response_model,
             "messages": messages,
         }
-        # metadata = kwargs.get("metadata", None)
-        # client_with_metadata = self.client.with_options(metadata={"_user": "user_12345", "custom_field": "custom_value"})
-        # if metadata is not None:
-        #     return client_with_metadata.chat.completions.create(**completion_params)
         return self.client.chat.completions.create(**completion_params)
