@@ -1,3 +1,4 @@
+import json
 import uuid
 from pydantic import BaseModel
 from ava_mosaic_ai.config.settings import LLMProvider
@@ -27,3 +28,10 @@ user_info = client.create_completion(
 
 print(user_info.name)
 print(user_info.age)
+
+# Mosiac-ai also stores the req request and response for auditing and debugging purposes
+# to access it use the following code
+audit_data = client.get_audit_data(response=user_info)
+print(json.dumps(audit_data, indent=4))
+
+
