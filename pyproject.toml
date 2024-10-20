@@ -11,7 +11,7 @@ packages = [{include = "ava_mosaic_ai"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 instructor = "^1.3.7"
-pydantic = "^2.8.2"
+pydantic = ">=2.7.0,<3"
 anthropic = "^0.34.0"
 openai = "^1.41.0"
 python-dotenv = "^1.0.1"

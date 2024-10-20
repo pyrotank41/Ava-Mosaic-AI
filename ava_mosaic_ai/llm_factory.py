@@ -104,8 +104,9 @@ class LLMFactory:
             provider = get_llm_provider(provider)
         self.http_client = http_client
         if self.http_client is None:
+            print("No http_client provided, Creating new http client")
             self.http_client = CustomHTTPXClient(max_cache_size=1000, cache_ttl=3600)
-        print(self.http_client)
+
         self.metadata = metadata
         self.provider = provider
         self.settings = get_settings().get_provider_settings(provider)
